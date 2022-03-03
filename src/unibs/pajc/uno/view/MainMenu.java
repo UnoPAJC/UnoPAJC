@@ -144,6 +144,8 @@ public class MainMenu extends JFrame
 			public void actionPerformed(ActionEvent e)
 			{
 				System.out.println("Start a new game!");
+				Game gameFrame = new Game();
+				gameFrame.setVisible(true);
 			}
 		});
 
