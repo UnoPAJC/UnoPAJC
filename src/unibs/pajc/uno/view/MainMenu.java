@@ -80,7 +80,7 @@ public class MainMenu extends JFrame
 				java.awt.Image.SCALE_SMOOTH);
 		ImageIcon image = new ImageIcon(bannerImage);
 
-		bannerLabel = new JLabel("asdasdasd");
+		bannerLabel = new JLabel("asdasdasd1");
 		bannerLabelSubtitle = new JLabel("A chess game in Java");
 
 		bannerLabel.setFont(RobotoFont.robotoFont);
@@ -92,7 +92,7 @@ public class MainMenu extends JFrame
 		bannerPanel.setPreferredSize(new Dimension(600, 250));
 		bannerPanel.add(bannerLabel);
 		// bannerPanel.add(bannerLabelSubtitle);
-		bannerPanel.setBackground(Color.LIGHT_GRAY);
+		bannerPanel.setBackground(new Color(237, 28, 36));
 	}
 
 	public void initializeButtonsPanel()
