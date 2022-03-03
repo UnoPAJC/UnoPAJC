@@ -22,7 +22,7 @@ public class RobotoFont
 		try
 		{
 			robotoFont = Font.createFont(Font.PLAIN, new File(FONTS_SDIR + "/Roboto/Roboto-MediumItalic.ttf"))
-					.deriveFont(45f);
+					.deriveFont(30f);
 
 			robotoFont2 = Font.createFont(Font.PLAIN, new File(FONTS_SDIR + "/Roboto/Roboto-LightItalic.ttf"))
 					.deriveFont(20f);

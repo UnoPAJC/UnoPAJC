@@ -68,7 +68,7 @@ public class MainMenu extends JFrame
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		Image bannerImage = new ImageIcon("res/img/main_banner.png").getImage().getScaledInstance(300, 300,
+		Image bannerImage = new ImageIcon("res/img/main_banner.png").getImage().getScaledInstance(500, 500,
 				java.awt.Image.SCALE_SMOOTH);
 
 		this.setIconImage(bannerImage);
@@ -76,11 +76,11 @@ public class MainMenu extends JFrame
 
 	public void initializeBannerPanel()
 	{
-		Image bannerImage = new ImageIcon("res/img/main_banner.png").getImage().getScaledInstance(400, 280,
+		Image bannerImage = new ImageIcon("res/img/main_banner.png").getImage().getScaledInstance(300, 250,
 				java.awt.Image.SCALE_SMOOTH);
 		ImageIcon image = new ImageIcon(bannerImage);
 
-		bannerLabel = new JLabel("");
+		bannerLabel = new JLabel(""); // Add text to main banner
 		bannerLabelSubtitle = new JLabel("A chess game in Java");
 
 		bannerLabel.setFont(RobotoFont.robotoFont);
