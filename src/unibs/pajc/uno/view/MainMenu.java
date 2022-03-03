@@ -3,6 +3,7 @@ package unibs.pajc.uno.view;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
@@ -13,7 +14,6 @@ import java.awt.event.MouseEvent;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -28,6 +28,8 @@ import unibs.pajc.uno.view.util.CustomFontManager;
  */
 public class MainMenu extends JFrame
 {
+	private static final String TITLE = "JChess, an opensource chess game written in Java";
+
 	private JPanel bannerPanel;
 	private JLabel bannerLabel;
 
@@ -39,7 +41,6 @@ public class MainMenu extends JFrame
 	private JPanel newGameButtonPanel;
 	private JButton newGameButton;
 
-	private JFileChooser loadGameFileChooser;
 	private JPanel loadGameButtonPanel;
 	private JButton loadGameButton;
 
@@ -48,7 +49,7 @@ public class MainMenu extends JFrame
 
 	public MainMenu()
 	{
-		super("JChess");
+		super("Uno");
 
 		CustomFontManager.initializeFont();
 		loadInterface();
@@ -78,7 +79,7 @@ public class MainMenu extends JFrame
 
 	public void initializeBannerPanel()
 	{
-		Image bannerImage = new ImageIcon("res/img/main_banner.png").getImage().getScaledInstance(300, 250,
+		Image bannerImage = new ImageIcon("res/img/main_banner.png").getImage().getScaledInstance(400, 320,
 				java.awt.Image.SCALE_SMOOTH);
 		ImageIcon image = new ImageIcon(bannerImage);
 
@@ -106,7 +107,6 @@ public class MainMenu extends JFrame
 		newGameButtonPanel = new JPanel(new GridLayout());
 		newGameButtonPanel.setBorder(BorderFactory.createEmptyBorder(30, 50, 40, 25));
 		newGameButtonPanel.add(newGameButton);
-		loadGameFileChooser = new JFileChooser("Load Saved Game");
 
 		loadGameButtonPanel = new JPanel(new GridLayout(1, 1));
 		loadGameButtonPanel.setBorder(BorderFactory.createEmptyBorder(30, 25, 40, 25));
@@ -124,7 +124,8 @@ public class MainMenu extends JFrame
 
 		JLabel descriptorLabel = new JLabel("UnoPAJC, an opensource uno card game written in Java",
 				SwingConstants.CENTER);
-		JLabel authorLabel = new JLabel("Made with ♥︎ by Stefano Valloncini", SwingConstants.CENTER);
+		JLabel authorLabel = new JLabel("Made by UnoTeam", SwingConstants.CENTER);
+		authorLabel.setFont(new Font("Arial", Font.PLAIN, 10));
 		// descriptorLabel.setFont(Font.PLAIN, 10, "TImes"); SETTING A CUSTOM FONT
 
 		JPanel descriptorPanelNorth = new JPanel();
@@ -160,7 +161,7 @@ public class MainMenu extends JFrame
 
 			public void mouseExited(MouseEvent e)
 			{
-				descriptorLabel.setText("JChess, an opensource chess game written in Java");
+				descriptorLabel.setText(TITLE);
 			}
 		});
 
@@ -173,7 +174,7 @@ public class MainMenu extends JFrame
 
 			public void mouseExited(MouseEvent e)
 			{
-				descriptorLabel.setText("JChess, an opensource chess game written in Java");
+				descriptorLabel.setText(TITLE);
 			}
 		});
 
@@ -186,7 +187,7 @@ public class MainMenu extends JFrame
 
 			public void mouseExited(MouseEvent e)
 			{
-				descriptorLabel.setText("JChess, an opensource chess game written in Java");
+				descriptorLabel.setText(TITLE);
 			}
 		});
 	}
