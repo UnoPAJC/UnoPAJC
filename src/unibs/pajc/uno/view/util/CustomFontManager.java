@@ -1,4 +1,4 @@
-package unibs.pajc.uno.view;
+package unibs.pajc.uno.view.util;
 
 import java.awt.Font;
 import java.awt.FontFormatException;
@@ -10,7 +10,7 @@ import java.io.IOException;
  *
  * @author Stefano Valloncini
  */
-public class RobotoFont
+public class CustomFontManager
 {
 	public static Font robotoFont;
 	public static Font robotoFont2;
@@ -22,7 +22,7 @@ public class RobotoFont
 		try
 		{
 			robotoFont = Font.createFont(Font.PLAIN, new File(FONTS_SDIR + "/Roboto/Roboto-MediumItalic.ttf"))
-					.deriveFont(45f);
+					.deriveFont(30f);
 
 			robotoFont2 = Font.createFont(Font.PLAIN, new File(FONTS_SDIR + "/Roboto/Roboto-LightItalic.ttf"))
 					.deriveFont(20f);
