@@ -80,7 +80,7 @@ public class MainMenu extends JFrame
 				java.awt.Image.SCALE_SMOOTH);
 		ImageIcon image = new ImageIcon(bannerImage);
 
-		bannerLabel = new JLabel("asdasdasd1");
+		bannerLabel = new JLabel("");
 		bannerLabelSubtitle = new JLabel("A chess game in Java");
 
 		bannerLabel.setFont(RobotoFont.robotoFont);
@@ -178,7 +178,7 @@ public class MainMenu extends JFrame
 		{
 			public void mouseEntered(MouseEvent e)
 			{
-				descriptorLabel.setText("Sit back and relax: watch AI play.");
+				descriptorLabel.setText("Sit back and play against AI.");
 			}
 
 			public void mouseExited(MouseEvent e)
