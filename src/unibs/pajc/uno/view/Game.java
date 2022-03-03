@@ -1,14 +1,21 @@
 package unibs.pajc.uno.view;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Graphics;
 
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.GridLayout;
 import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 import javax.swing.JSplitPane;
 import javax.swing.JTextArea;
@@ -73,13 +80,26 @@ public class Game extends JFrame {
 		
 	}
 	
-	
 	public void loadTable() {
 		
+		/*JPanel gamePanel = new JPanel() {
+			
+			public void paintComponent(Graphics g) {
+				
+				ImageIcon wallpaper = new ImageIcon("res/img/sfondo.png");
+				Image i = wallpaper.getImage();
+				
+				g.drawImage(i, 0, 0, this.getSize().width, this.getSize().height, this);
+				
+			}
+			
+		};*/
 		JPanel gamePanel = new JPanel();
+		gamePanel.setBackground(Color.MAGENTA);
 		gamePanel.setBounds(0, 0, 580, 431);
 		contentPane.add(gamePanel);
+		gamePanel.setLayout(new BorderLayout(0, 0));
 		
-		
+	    
 	}
 }
