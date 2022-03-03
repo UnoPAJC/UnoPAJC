@@ -28,7 +28,7 @@ import unibs.pajc.uno.view.util.CustomFontManager;
  */
 public class MainMenu extends JFrame
 {
-	private static final String TITLE = "JChess, an opensource chess game written in Java";
+	private static final String TITLE = "UnoPACJ, an opensource uno game made in Java";
 
 	private JPanel bannerPanel;
 	private JLabel bannerLabel;
@@ -79,7 +79,7 @@ public class MainMenu extends JFrame
 
 	public void initializeBannerPanel()
 	{
-		Image bannerImage = new ImageIcon("res/img/main_banner.png").getImage().getScaledInstance(400, 320,
+		Image bannerImage = new ImageIcon("res/img/main_banner.png").getImage().getScaledInstance(350, 250,
 				java.awt.Image.SCALE_SMOOTH);
 		ImageIcon image = new ImageIcon(bannerImage);
 
