@@ -1,4 +1,4 @@
-package unibs.pajc.uno.view;
+package unibs.pajc.uno.view.util;
 
 import java.awt.Font;
 import java.awt.FontFormatException;
@@ -10,7 +10,7 @@ import java.io.IOException;
  *
  * @author Stefano Valloncini
  */
-public class RobotoFont
+public class CustomFontManager
 {
 	public static Font robotoFont;
 	public static Font robotoFont2;

@@ -19,6 +19,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
+import unibs.pajc.uno.view.util.CustomFontManager;
+
 /**
  * Class to launch main menu.
  * 
@@ -48,7 +50,7 @@ public class MainMenu extends JFrame
 	{
 		super("JChess");
 
-		RobotoFont.initializeFont();
+		CustomFontManager.initializeFont();
 		loadInterface();
 	}
 
@@ -68,7 +70,7 @@ public class MainMenu extends JFrame
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		Image bannerImage = new ImageIcon("res/img/main_banner.png").getImage().getScaledInstance(500, 500,
+		Image bannerImage = new ImageIcon("res/img/main_icon.png").getImage().getScaledInstance(500, 500,
 				java.awt.Image.SCALE_SMOOTH);
 
 		this.setIconImage(bannerImage);
@@ -83,7 +85,7 @@ public class MainMenu extends JFrame
 		bannerLabel = new JLabel(""); // Add text to main banner
 		bannerLabelSubtitle = new JLabel("A chess game in Java");
 
-		bannerLabel.setFont(RobotoFont.robotoFont);
+		bannerLabel.setFont(CustomFontManager.robotoFont);
 		bannerLabel.setForeground(new Color(20, 20, 20));
 		bannerLabel.setIcon(image);
 		bannerLabel.setIconTextGap(25);
@@ -97,8 +99,8 @@ public class MainMenu extends JFrame
 
 	public void initializeButtonsPanel()
 	{
-		newGameButton = new JButton("New Game");
-		loadGameButton = new JButton("Load Game");
+		newGameButton = new JButton("New Online Game");
+		loadGameButton = new JButton("New Offline Game");
 		AIGameButton = new JButton("AI Simulated");
 
 		newGameButtonPanel = new JPanel(new GridLayout());
@@ -120,7 +122,8 @@ public class MainMenu extends JFrame
 		buttonsPanel.add(loadGameButtonPanel);
 		buttonsPanel.add(AIGamePanel);
 
-		JLabel descriptorLabel = new JLabel("JChess, an opensource chess game written in Java", SwingConstants.CENTER);
+		JLabel descriptorLabel = new JLabel("UnoPAJC, an opensource uno card game written in Java",
+				SwingConstants.CENTER);
 		JLabel authorLabel = new JLabel("Made with ♥︎ by Stefano Valloncini", SwingConstants.CENTER);
 		// descriptorLabel.setFont(Font.PLAIN, 10, "TImes"); SETTING A CUSTOM FONT
 
@@ -130,7 +133,7 @@ public class MainMenu extends JFrame
 		descriptionPaneSouth.setBorder(BorderFactory.createEmptyBorder(1, 25, 1, 40));
 
 		descriptorPanelNorth.add(descriptorLabel);
-		descriptorLabel.setFont(RobotoFont.robotoFont2);
+		descriptorLabel.setFont(CustomFontManager.robotoFont2);
 		descriptionPaneSouth.add(authorLabel);
 
 		mainContainer = new JPanel(new BorderLayout());
