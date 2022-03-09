@@ -5,24 +5,23 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Graphics;
 
-import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import java.awt.GridLayout;
-import java.awt.Image;
-import java.awt.Toolkit;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-
-import javax.swing.JSplitPane;
 import javax.swing.JTextArea;
+import javax.swing.border.EmptyBorder;
+import java.awt.Image;
+import java.util.ArrayList;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.FlowLayout;
 
 public class Game extends JFrame {
 
+	JPanel gamePanel;
+	
 	private JPanel contentPane;
+	private JPanel panelCarta;
 
 	/**
 	 * Launch the application.
@@ -59,6 +58,7 @@ public class Game extends JFrame {
 		loadTitle();
 		loadTable();	//parte sinistra, il tavolo di gioco
 		loadChat();	//parte di destra, la chat
+		loadCard();
 	}
 	
 	public void loadChat() {
@@ -67,6 +67,8 @@ public class Game extends JFrame {
 		chat.setBounds(579, 0, 214, 431);
 		chat.setEditable(false);
 		contentPane.add(chat);
+		
+		
 	}
 	
 	public void loadTitle() {
@@ -82,24 +84,34 @@ public class Game extends JFrame {
 	
 	public void loadTable() {
 		
-		/*JPanel gamePanel = new JPanel() {
+		gamePanel = new JPanel() { 		// set image as background
 			
 			public void paintComponent(Graphics g) {
 				
-				ImageIcon wallpaper = new ImageIcon("res/img/sfondo.png");
+				ImageIcon wallpaper = new ImageIcon("res/img/wallpaper.png");
 				Image i = wallpaper.getImage();
 				
 				g.drawImage(i, 0, 0, this.getSize().width, this.getSize().height, this);
 				
 			}
 			
-		};*/
-		JPanel gamePanel = new JPanel();
-		gamePanel.setBackground(Color.MAGENTA);
+		};
 		gamePanel.setBounds(0, 0, 580, 431);
 		contentPane.add(gamePanel);
 		gamePanel.setLayout(new BorderLayout(0, 0));
-		
 	    
+	}
+	
+	public void loadCard() {
+		panelCarta = new JPanel();
+		gamePanel.add(panelCarta, BorderLayout.CENTER);
+		panelCarta.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		
+		for(int i = 0; i < 20; i++) {
+			panelCarta.add(new Carta(String.valueOf(i)));
+		}
+		
+		 
+		
 	}
 }
