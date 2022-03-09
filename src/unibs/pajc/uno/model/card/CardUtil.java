@@ -4,7 +4,7 @@ package unibs.pajc.uno.model.card;
  * 
  * @author Stefano Valloncini, Ye Yuhang, Luigi Amarante
  *
- *         Static methods to validate attributes
+ *         Static methods to validate attributes, such as Color
  *
  */
 public class CardUtil

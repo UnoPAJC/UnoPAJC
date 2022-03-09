@@ -18,6 +18,9 @@ public class CardDeck
 		return Collections.unmodifiableList(cards);
 	}
 
+	/**
+	 * Calls method to call cards creators
+	 */
 	private void createCards()
 	{
 		createNumberCards();
@@ -25,13 +28,16 @@ public class CardDeck
 		createWildCards();
 	}
 
+	/**
+	 * Method to create all cards representing a number
+	 */
 	private void createNumberCards()
 	{
-		for (var color : CardColor.values())
+		for (CardColor color : CardColor.values())
 		{
 			cards.add(new NumberCard(0, color));
 
-			for (var i = 1; i <= 9; i++)
+			for (int i = 1; i <= 9; i++)
 			{
 				cards.add(new NumberCard(i, color));
 				cards.add(new NumberCard(i, color));
@@ -39,9 +45,12 @@ public class CardDeck
 		}
 	}
 
+	/**
+	 * Method to create action cards
+	 */
 	private void createActionCards()
 	{
-		for (var color : CardColor.values())
+		for (CardColor color : CardColor.values())
 		{
 			for (var i = 0; i < 2; i++)
 			{
@@ -52,9 +61,12 @@ public class CardDeck
 		}
 	}
 
+	/**
+	 * Method to create WildCards
+	 */
 	private void createWildCards()
 	{
-		for (var i = 0; i < 4; i++)
+		for (int i = 0; i < 4; i++)
 		{
 			cards.add(new WildCard(CardType.WILD_COLOR));
 			cards.add(new WildCard(CardType.WILD_DRAW_FOUR));
