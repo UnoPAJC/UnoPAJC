@@ -4,6 +4,11 @@ import java.awt.EventQueue;
 
 import unibs.pajc.uno.view.MainMenu;
 
+/**
+ * 
+ * @author Stefano Valloncini, Ye Yuhang, Luigi Amarante
+ *
+ */
 public class UnoMain
 {
 	public static void main(String[] args)
