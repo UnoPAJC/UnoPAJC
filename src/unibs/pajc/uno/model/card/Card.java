@@ -6,7 +6,7 @@ import java.io.Serializable;
  * 
  * @author Stefano Valloncini, Ye Yuhang, Luigi Amarante
  *
- *         Card interface.
+ *         Card interface. Every card has a type and a color (enums)
  */
 public interface Card extends Serializable
 {

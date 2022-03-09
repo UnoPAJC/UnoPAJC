@@ -3,6 +3,8 @@ package unibs.pajc.uno.model.card;
 /**
  * 
  * @author Stefano Valloncini, Ye Yuhang, Luigi Amarante
+ * 
+ *         Abstract class to implement Card class.
  *
  */
 public class AbstractCard implements Card
@@ -10,7 +12,7 @@ public class AbstractCard implements Card
 	private final CardType type;
 	private final CardColor color;
 
-	private AbstractCard(CardType type, CardColor color)
+	public AbstractCard(CardType type, CardColor color)
 	{
 		this.type = type;
 		this.color = color;
