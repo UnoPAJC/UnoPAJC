@@ -19,14 +19,19 @@ public class ActionCard extends AbstractCard
 	}
 
 	@Override
-	public boolean equals(Object o)
+	public boolean equals(Object object)
 	{
-		if (this == o)
+		if (this == object)
+		{
 			return true;
-		if (o == null || getClass() != o.getClass())
+		}
+		if (object == null || getClass() != object.getClass())
+		{
 			return false;
-		ActionCard that = (ActionCard) o;
-		return getType() == that.getType() && getColor() == that.getColor();
+		}
+		ActionCard theActionCard = (ActionCard) object;
+
+		return getType() == theActionCard.getType() && getColor() == theActionCard.getColor();
 	}
 
 	@Override
